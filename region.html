@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>互联网违法和不良信息举报平台</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="flex flexCen flexAlign">
+            <div class="tit">
+
+            </div>
+        </header>
+        <nav>
+            <div class="con">
+                <ul class="flex">
+                    <li class="li1"><a href="index.html">首页</a></li>
+                    <li class="li2"><a href="guide.html">举报指南</a></li>
+                    <li class="li2"><a href="thelaw.html">法律法规</a></li>
+                    <li class="li2"><a href="seach.html">查询结果</a></li>
+                    <li class="li2"><a href="institutional.html">机构简介</a></li>
+                </ul>
+                <div class="seach">
+                    <input type="text" placeholder="请输入举报号" oninput="this.value=this.value.replace(/[^\d]/g,'')">
+                    <span class="iconfont icon-sousuo"></span>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="conter">
+                <div class="top flex">
+                    <div class="home"></div>
+                    <div class="tit">
+                        <a href="index.html" class="hui">首页</a><span class="hui">＞</span><a href="region.html"
+                            class="hui act">兵团中心举报
+                        </a>
+                    </div>
+                </div>
+                <div id="region">
+                    <div class="btm">
+                        <div class="bg">
+                            <div class="bLefTop fleax">
+                                <div class="left flex">
+                                    <div class="icon"></div>
+                                    <div class="tit">兵团中心举报</div>
+                                </div>
+                                <div class="right">
+                                </div>
+                            </div>
+                            <div id="formData">
+                                <div class="bleftCon">
+                                    <div class="ConTop flex">
+                                        <div class="icon peoper"></div>
+                                        举报人基本信息
+                                    </div>
+                                    <div class="conBor" style="width: 638px"></div>
+                                    <div class="form">
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>真实姓名：
+                                            </div>
+                                            <div class="right">
+                                                <input type="text" placeholder="请输入姓名" id="txtRealName" autofocus>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>姓别：
+                                            </div>
+                                            <div class="right flex" id="sex">
+                                                <div class="radioLeft">
+                                                    <span class="radio checked" data-radio="1"></span>男
+                                                </div>
+                                                <div class="radioLeft">
+                                                    <span class="radio" data-radio="0"></span>女
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>电话号码：
+                                            </div>
+                                            <div class="right">
+                                                <input type="text" placeholder="请输入电话号码" id="txtPhone"
+                                                    oninput="value=value.replace(/[^\d]/g,'')" maxlength="11">
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>电子邮箱：
+                                            </div>
+                                            <div class="right">
+                                                <input type="email" placeholder="请输入电子邮箱" id="txtEmail">
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>请选择区域：
+                                            </div>
+                                            <div class="right">
+                                                <select id="peoplearea">
+                                                </select>
+                                                <select id="peoplearea2" class="show">
+                                                </select>
+                                                <select id="peoplearea3" class="show">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                通讯地址：
+                                            </div>
+                                            <div class="right">
+                                                <input type="text" placeholder="请输入通讯地址" id="txtAddress">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bleftCon">
+                                    <div class="ConTop flex">
+                                        <div class="icon information"></div>
+                                        举报信息
+                                    </div>
+                                    <div class="conBor" style="width: 638px"></div>
+                                    <div class="form">
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>被举报类型：
+                                            </div>
+                                            <div class="right">
+                                                <select id="selSiteType">
+                                                    <option value="">--请选择--</option>
+                                                    <option value='1' extend=''>网站</option>
+                                                    <option value='2' extend=''>搜索引擎类</option>
+                                                    <option value='3' extend=''>手机APP</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>网站名称：
+                                            </div>
+                                            <div class="right">
+                                                <input type="text" placeholder="请输入网站名称" id="txtSiteName">
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>被举报网址(url)：
+                                            </div>
+                                            <div class="right">
+                                                <input type="url" placeholder="请输入网址" id="txtSiteUrl">
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>信息所在详情网址(url)：
+                                            </div>
+                                            <div class="right">
+                                                <textarea name="" id="txtInfoUrl" placeholder="多个网址，回车换行" cols="45"
+                                                    rows="5" maxlength="1000"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                <span>*</span>举报内容：
+                                            </div>
+                                            <div class="right">
+                                                <textarea id="txtContent" cols="45" rows="5"
+                                                    placeholder="内容不超过200个字符"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                危害类型：
+                                            </div>
+                                            <div class="right">
+                                                <select id="selHarmType">
+                                                    <option value="">--请选择--</option>
+                                                    <option value='1' extend=''>淫秽色情</option>
+                                                    <option value='2' extend=''>宣扬邪教</option>
+                                                    <option value='3' extend=''>赌博</option>
+                                                    <option value='4' extend=''>诈骗</option>
+                                                    <option value='5' extend=''>侵权</option>
+                                                    <option value='6' extend=''>私服外挂</option>
+                                                    <option value='7' extend=''>病毒</option>
+                                                    <option value='8' extend=''>违背宪法原则</option>
+                                                    <option value='9' extend=''>攻击党和政府</option>
+                                                    <option value='10' extend=''>违背社会公德</option>
+                                                    <option value='11' extend=''>其他违法和不良信息</option>
+                                                    <option value='12' extend=''>暴恐信息</option>
+                                                    <option value='13' extend=''>虚假新闻</option>
+                                                    <option value='14' extend=''>旅游网站违规失信</option>
+                                                    <option value='15' extend=''>涉毒涉枪</option>
+                                                    <option value='16' extend=''>贩卖假证</option>
+                                                    <option value='17' extend=''>非法药品及医疗广告</option>
+                                                    <option value='18' extend=''>歪曲丑化党史国史</option>
+                                                    <option value='19' extend=''>造谣传谣</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+                                                附件：
+                                            </div>
+                                            <div class="right" id="imgList">
+                                                <div id="chooseImage" class="titImg">
+                                                    <input type="file">
+                                                    <div class="tit">
+                                                        <div class="jia">+</div>
+                                                        <div>上传</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+
+                                            </div>
+                                            <div class="right">
+                                                <div class="total">
+                                                    <div>
+                                                        备注：1.允许上传的图片格式：jpg.gif.png.jpeg.bmp
+                                                    </div>
+                                                    <div class="two">
+                                                        2.每张图片大小不能超过：5,120KByte
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex" style="margin-top:64px;">
+                                            <div class="left">
+                                                <span>*</span>验证码：
+                                            </div>
+                                            <div class="right flex">
+                                                <input type="text" style="width:180px" placeholder="请输入验证码"
+                                                    id="codeNumber">
+                                                <img width="75px" height="32px" style="margin-left: 8px"
+                                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564052589524&di=0b38f6acb03ad3f9a22fd7578d520a74&imgtype=0&src=http%3A%2F%2Fs4.sinaimg.cn%2Fmw690%2F003bsgbmgy6R6efoOr1c3"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="iptForm flex">
+                                            <div class="left">
+
+                                            </div>
+                                            <div class="right flex">
+                                                <div class="submit btn">
+                                                    <span class="iconfont icon-tijiao"></span>
+                                                    提交
+                                                </div>
+                                                <div class="reset btn">
+                                                    <span class="iconfont icon-zhongzhi"></span>
+                                                    重置
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnBom">
+                        <h2>请您在正式提交举报之前确认以下内容：</h2>
+                        <p>1、您应当保证所举报内容与事实一致。若您故意捏造和歪曲事实而造成的一切后果，由您自行承担。</p>
+                        <p>2、您应当允许工作委员会根据工作需要在保护您的个人权益的前提下，使用您的任何叙述。</p>
+                        <p>3、请您尽可能填写详实内容，以利于您举报问题的解决。</p>
+                        <p>4、工作委员会将及时处理您举报的有效内容。</p>
+                        <p>5、如您有其它疑问，请认真阅读 "<a href="guide.html" target="_blank" class="guide">举报指南</a>" 。</p>
+                    </div>
+                    <div class="show" id="imgShow">
+                        <div id="bgimg">
+                            <div class="closeImg">X</div>
+                            <img src="" alt="">
+                        </div>
+                        <div id="bg"></div>
+                    </div>
+                </div>
+                <div class="btm show" id="success">
+                    <div class="btmLeft" style="height: 612px">
+                        <div class="bLefTop flex">
+                            <div class="left flex">
+                                <div class="icon"></div>
+                                <div class="tit">兵团中心举报</div>
+                            </div>
+                            <div class="right">
+                            </div>
+                        </div>
+                        <div class="bLeCon">
+                            <div class="logSuc">
+
+                            </div>
+                            <div class="sucTit1">
+                                提交成功
+                            </div>
+                            <div class="sucTit2">
+                                举报信息提交成功！
+                            </div>
+                            <div class="sucTit3">
+                                <div class="suTop">
+                                    您提交举报信息的查询码：
+                                    <span>64593457</span>
+                                </div>
+                                <div class="suBtn">
+                                    <a href="javascript:;">
+                                        <button>继续举报</button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>互联网违法和不良信息举报平台</footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
